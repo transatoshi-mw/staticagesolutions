@@ -1,0 +1,210 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+    <script type="text/javascript">
+        
+        
+        
+        
+        var AWSConsoleMetrics = { pageId: "s3v3" };
+        function performanceMark(name) {
+            if (performance && performance.mark) {
+                performance.mark(name);
+            }
+        }
+        function performanceMeasure(name) {
+            if (performance && performance.measure) {
+                performance.measure(name, "PageStartLoading");
+            }
+        }
+        performanceMark("PageStartLoading");
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html lang="en">
+<head>
+    <title>S3 Management Console</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="pragma" content="no-cache" />
+
+<style>html { background-color: #f2f3f3; }</style>
+<meta name="awsc-session-data" content='&#34;{}&#34;' />
+<meta name="awsc-mezz" content="1">
+<meta id="awsc-mezz-region" name="awsc-mezz-region" content="us-west-2">
+<meta id="awsc-mezz-locale" name="awsc-mezz-locale" content="en">
+
+<meta name="awsc-console-supported-locales" content='{"consoleLanguages":[{"localeId":"en","supported":true,"localeDisplayName":"English (US)"},{"localeId":"en_GB","supported":false,"localeDisplayName":"English (UK)"},{"localeId":"in","supported":true,"localeDisplayName":"Bahasa Indonesia"},{"localeId":"de","supported":true,"localeDisplayName":"Deutsch"},{"localeId":"es","supported":true,"localeDisplayName":"Español"},{"localeId":"fr","supported":true,"localeDisplayName":"Français"},{"localeId":"ja","supported":true,"localeDisplayName":"日本語"},{"localeId":"it","supported":true,"localeDisplayName":"Italiano"},{"localeId":"pt_BR","supported":true,"localeDisplayName":"Português"},{"localeId":"ko","supported":true,"localeDisplayName":"한국어"},{"localeId":"zh_CN","supported":true,"localeDisplayName":"中文(简体)"},{"localeId":"zh_TW","supported":true,"localeDisplayName":"中文(繁體)"},{"localeId":"tr_TR","supported":true,"localeDisplayName":"Turkish (Turkey)"}]}'/>
+<meta id="awsc-mezz-fb" name="awsc-mezz-fb" content="0">
+<meta id="awsc-proxy-request-id" name="awsc-proxy-request-id" content="68a8f232b538b87b6bbc1cd963a1d5d7">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="icon-domain" content='https://d3rrzw75sdtfe5.cloudfront.net'/><style type="text/css">
+#awsgnav #nav-logo,
+#awsgnav .nav-menu-arrow,
+#awsgnav .service-icon,
+#awsgnav .nav-selected-category-arrow,
+#awsgnav .nav-menu-content-close-arrow,
+#awsgnav .service-drag-handle,
+#awsgnav #awsc-rg-loading,
+#awsgnav #awsc-rg-error:before,
+.awsc-footer-icon,
+.awsc-service-icon /* .awsc-service-icon to be used by Console Home */
+{
+    background-image: url('https://d3rrzw75sdtfe5.cloudfront.net/icon-sprite-62c4323071cbf0be79c27450877cf9c8b3f94ec9.png');
+    background-repeat: no-repeat;
+}</style>
+
+<meta name="awsc-user-preferences" content="{"locale":"en","colorTheme":"light"}">
+
+<meta id="awsc-signin-endpoint" name="awsc-signin-endpoint" content="signin.aws.amazon.com">
+
+<meta id="awsc-widget-nav" name="awsc-widget-nav" content="1">
+
+
+
+<script data-platform-asset="global-nav-head" src="https://a.b.cdn.console.awsstatic.com/a/v1/3SCMY4UFPRNR5GQ7CVP3GCUZO2HYCB335I3Y5WUYH3C6VKDLDTGQ/dist/awsc-head.js"></script>
+<script data-unified-console-app-loader data-platform-asset="unified-console" type="module" async="async" crossorigin="anonymous" src="https://a.b.cdn.console.awsstatic.com/a/v1/Z43KFIS3Z5KYER4LQQTKYOHTSGH7R7JLM7GMBGL2IT7VPWSGMIPA/index.js"></script>
+<link data-platform-asset="global-nav-css" rel="stylesheet" href="https://a.b.cdn.console.awsstatic.com/ae7ecf3934457e816be193a151ef9bfb3100abcc340350006f55f6fbb9155bc9/dist/polaris-global-css.css?version=*"></link>
+
+
+        <base href="/s3/">
+        <meta name="referrer" content="no-referrer-when-downgrade"/>
+        <meta name="awsc-lang" content="en">
+        <meta id="sysInfo" name="sysInfo" content = '{"cloudSystem":"PUBLIC","masterRegion":"us-east-1","region":"us-west-2","domain":"prod","allRegions":["ap-south-2","ap-south-1","eu-south-1","eu-south-2","me-central-1","il-central-1","ca-central-1","eu-central-1","eu-central-2","us-west-1","us-west-2","af-south-1","eu-north-1","eu-west-3","eu-west-2","eu-west-1","ap-northeast-3","ap-northeast-2","me-south-1","ap-northeast-1","sa-east-1","ap-east-1","ca-west-1","ap-southeast-1","ap-southeast-2","ap-southeast-3","ap-southeast-4","us-east-1","us-east-2"],"directoryAZs":["use1-az4","use1-az5","use1-az6","eun1-az2","eun1-az1","apne1-az1","apne1-az4","usw2-az1","usw2-az4","usw2-az3","eun1-az3"],"directoryRegions":["eu-north-1","ap-northeast-1","us-east-1","us-west-2"]}' >
+        <meta property="requestLocale" content="en">
+        
+        
+        
+        <meta id="meta-features-json" name="features-json" data-featuresjson='[{"externalId":"s3-veyron","enabled":true},{"externalId":"s3-ap-edit","enabled":true},{"externalId":"s3-eu-north-1","enabled":true},{"externalId":"s3-kahlo","enabled":true},{"externalId":"s3-opt-in-regions","enabled":true},{"externalId":"s3-us-east-1","enabled":true},{"externalId":"s3-us-east-2","enabled":true},{"externalId":"s3-tulip-ezcrc","enabled":true},{"externalId":"s3-polaris-access-analyzer-access-preview","enabled":true},{"externalId":"s3-copy","enabled":true},{"externalId":"s3-log-response-data","enabled":true},{"externalId":"s3-lens-logging","enabled":true},{"externalId":"s3-eu-south-2","enabled":true},{"externalId":"s3-rrs","enabled":true},{"externalId":"s3-eu-south-1","enabled":true},{"externalId":"s3-new-page-titles","enabled":true},{"externalId":"s3-mrap-failover","enabled":true},{"externalId":"s3-ld","enabled":true},{"externalId":"s3-make-public","enabled":true},{"externalId":"s3-report-format","enabled":true},{"externalId":"s3-csp-filter","enabled":true},{"externalId":"s3-bucket-key","enabled":true},{"externalId":"glacier-storage-metrics","enabled":true},{"externalId":"s3-sdo","enabled":true},{"externalId":"s3-us-west-2","enabled":true},{"externalId":"s3-polaris-acceleration-sa-east-1","enabled":true},{"externalId":"s3-quick-tips","enabled":true},{"externalId":"s3-block-prefix-copy","enabled":true},{"externalId":"s3-us-west-1","enabled":true},{"externalId":"glacier-launched-af-south-1","enabled":true},{"externalId":"s3-replication-speckle","enabled":true},{"externalId":"s3-batch-ops-ca-west-1","enabled":true},{"externalId":"s3-ap-east-1","enabled":true},{"externalId":"s3-polaris-aws-target-placements","enabled":true},{"externalId":"iam-policy-editor","enabled":true},{"externalId":"s3-batch-ops-ap-south-1","enabled":true},{"externalId":"glacier-launched-sa-east-1","enabled":true},{"externalId":"s3-batch-ops-ap-south-2","enabled":true},{"externalId":"s3-response-payload-checksum","enabled":true},{"externalId":"glacier-launched-ap-northeast-1","enabled":true},{"externalId":"glacier-launched-ap-northeast-3","enabled":true},{"externalId":"s3-polaris-bops","enabled":true},{"externalId":"s3-polaris-access-analyzer","enabled":true},{"externalId":"glacier-launched-ap-northeast-2","enabled":true},{"externalId":"s3-batch-ops-ap-northeast-3","enabled":true},{"externalId":"s3-batch-ops-ap-northeast-2","enabled":true},{"externalId":"s3-batch-ops-ap-northeast-1","enabled":true},{"externalId":"s3-regional-views","enabled":true},{"externalId":"s3-csp-filter-enfc","enabled":true},{"externalId":"s3-select","enabled":true},{"externalId":"s3-select-metrics","enabled":true},{"externalId":"s3-batch-ops-worm","enabled":true},{"externalId":"s3-crr-slice","enabled":true},{"externalId":"s3-create-bucket-extra-properties","enabled":true},{"externalId":"s3-eu-central-2","enabled":true},{"externalId":"s3-ap-abba","enabled":true},{"externalId":"s3-staircase","enabled":true},{"externalId":"s3-eu-central-1","enabled":true},{"externalId":"s3-polaris-acceleration-eu-west-2","enabled":true},{"externalId":"s3-polaris-acceleration-eu-west-3","enabled":true},{"externalId":"s3-prod-stack-eu-central-2","enabled":true},{"externalId":"s3-polaris-acceleration-eu-west-1","enabled":true},{"externalId":"s3-prod-stack-eu-central-1","enabled":true},{"externalId":"glacier-launched-ca-central-1","enabled":true},{"externalId":"glacier-launched-eu-north-1","enabled":true},{"externalId":"s3-prod-stack-eu-south-1","enabled":true},{"externalId":"s3-prod-stack-eu-south-2","enabled":true},{"externalId":"s3-sharpie","enabled":true},{"externalId":"s3-upload-parallel-1","enabled":true},{"externalId":"s3-delete","enabled":true},{"externalId":"aws-quicksight","enabled":true},{"externalId":"s3-retina","enabled":true},{"externalId":"s3-sublime","enabled":true},{"externalId":"s3-appconfig-testing","enabled":true},{"externalId":"s3-homepage","enabled":true},{"externalId":"s3-crr-v2","enabled":true},{"externalId":"s3-ap","enabled":true},{"externalId":"s3-polaris-object-ownership-pub","enabled":true},{"externalId":"s3-nightfall","enabled":true},{"externalId":"s3-an","enabled":true},{"externalId":"s3-il-central-1","enabled":true},{"externalId":"s3-polaris-acceleration-us-west-2","enabled":true},{"externalId":"s3-eu-west-3","enabled":true},{"externalId":"s3-crr-kms","enabled":true},{"externalId":"s3-polaris-acceleration-us-west-1","enabled":true},{"externalId":"s3-ol-abba","enabled":true},{"externalId":"s3-eu-west-2","enabled":true},{"externalId":"s3-eu-west-1","enabled":true},{"externalId":"s3-youtube-video","enabled":true},{"externalId":"s3-block-version-view-folder-delete","enabled":true},{"externalId":"s3-prod-stack-ap-east-1","enabled":true},{"externalId":"s3-essos","enabled":true},{"externalId":"s3-compact-table","enabled":true},{"externalId":"s3-batch-ops-inv","enabled":true},{"externalId":"s3-banner","enabled":true},{"externalId":"s3-batch-ops-me-south-1","enabled":true},{"externalId":"s3-ot-up","enabled":false},{"externalId":"s3-inventory-bops-bucketkey","enabled":true},{"externalId":"s3-access-column-experiment","enabled":true},{"externalId":"glacier-launched-us-west-1","enabled":true},{"externalId":"s3-ap-lamb-access","enabled":true},{"externalId":"glacier-launched-us-west-2","enabled":true},{"externalId":"s3-prod-stack-sa-east-1","enabled":true},{"externalId":"s3-objlist-fill-maxkeys","enabled":true},{"externalId":"s3-ap-northeast-2","enabled":true},{"externalId":"s3-ap-northeast-3","enabled":true},{"externalId":"s3-delete-marker-replication","enabled":true},{"externalId":"s3-polaris-acceleration-eu-central-1","enabled":true},{"externalId":"s3-copy-from-bucket","enabled":true},{"externalId":"s3-ap-northeast-1","enabled":true},{"externalId":"s3-request-blocker","enabled":true},{"externalId":"s3-ap-southeast-3","enabled":true},{"externalId":"s3-ap-southeast-2","enabled":true},{"externalId":"s3-ap-southeast-1","enabled":true},{"externalId":"s3-lamb-inregion-shadow","enabled":true},{"externalId":"s3-af-south-1","enabled":true},{"externalId":"s3-oi","enabled":true},{"externalId":"s3-brawn","enabled":true},{"externalId":"s3-prod-stack-us-west-1","enabled":true},{"externalId":"s3-initiate-restore","enabled":true},{"externalId":"s3-ap-details","enabled":true},{"externalId":"s3-prod-stack-us-west-2","enabled":true},{"externalId":"s3-lamb-localstorage","enabled":true},{"externalId":"s3-banner-comprehend","enabled":true},{"externalId":"s3-send-to-put-copy","enabled":true},{"externalId":"s3-rename","enabled":true},{"externalId":"s3-sharpie-v2","enabled":true},{"externalId":"s3-prod-stack-il-central-1","enabled":true},{"externalId":"s3-ot","enabled":true},{"externalId":"s3-batch-ops-eu-north-1","enabled":true},{"externalId":"s3-batch-ops-ca-central-1","enabled":true},{"externalId":"s3-versioned-view","enabled":true},{"externalId":"s3-region-level-enc","enabled":false},{"externalId":"s3-share-link","enabled":true},{"externalId":"s3-prod-stack-eu-north-1","enabled":true},{"externalId":"s3-woodchipper","enabled":true},{"externalId":"s3-batch-ops","enabled":true},{"externalId":"glacier-launched-ap-east-1","enabled":true},{"externalId":"s3-ap-create-bpa-warning","enabled":true},{"externalId":"s3-lc-est-cost-msg","enabled":true},{"externalId":"s3-new-multipart-copy","enabled":false},{"externalId":"s3-prod-stack-us-east-2","enabled":true},{"externalId":"s3-prod-stack-us-east-1","enabled":true},{"externalId":"s3-prod-stack-ap-northeast-1","enabled":true},{"externalId":"s3-ap-southeast-4","enabled":true},{"externalId":"s3-prod-stack-ap-northeast-2","enabled":true},{"externalId":"s3-prod-stack-ap-northeast-3","enabled":true},{"externalId":"s3-prod-stack-ap-southeast-2","enabled":true},{"externalId":"s3-prod-stack-ap-southeast-1","enabled":true},{"externalId":"s3-marketplace","enabled":true},{"externalId":"delete-objects-fallback","enabled":true},{"externalId":"s3-staircase-disabled-me-central-1","enabled":true},{"externalId":"s3-mrap","enabled":true},{"externalId":"s3-polaris-ap","enabled":true},{"externalId":"s3-prizm","enabled":true},{"externalId":"s3-me-south-1","enabled":true},{"externalId":"s3-up","enabled":true},{"externalId":"s3-prod-stack-ap-southeast-4","enabled":true},{"externalId":"s3-prod-stack-ap-southeast-3","enabled":true},{"externalId":"s3-eb","enabled":true},{"externalId":"s3-kms","enabled":true},{"externalId":"s3-polaris-acceleration-ap-northeast-1","enabled":true},{"externalId":"s3-polaris-acceleration-ap-northeast-2","enabled":true},{"externalId":"shortbread-cookie","enabled":true},{"externalId":"s3-batch-ops-eu-west-1","enabled":true},{"externalId":"s3-batch-ops-eu-west-2","enabled":true},{"externalId":"glacier-launched-me-south-1","enabled":true},{"externalId":"s3-batch-ops-eu-west-3","enabled":true},{"externalId":"s3-prod-stack-me-south-1","enabled":true},{"externalId":"s3-download","enabled":true},{"externalId":"s3-batch-ops-me-central-1","enabled":true},{"externalId":"s3-batch-ops-ap-east-1","enabled":true},{"externalId":"s3-ca-central-1","enabled":true},{"externalId":"glacier-launched-us-east-1","enabled":true},{"externalId":"s3-cross-account-olap","enabled":true},{"externalId":"s3-cwm-accesspoint-filter","enabled":true},{"externalId":"glacier-launched-us-east-2","enabled":true},{"externalId":"s3-ap-sync-region","enabled":true},{"externalId":"s3-batch-ops-us-west-2","enabled":true},{"externalId":"s3-veyron-ga-copy-v-s3","enabled":true},{"externalId":"s3-harvest-vbd","enabled":true},{"externalId":"s3-tq","enabled":false},{"externalId":"s3-db","enabled":true},{"externalId":"s3-replication-blast","enabled":true},{"externalId":"s3-ca-west-1","enabled":true},{"externalId":"s3-ap-south-1","enabled":true},{"externalId":"s3-ap-south-2","enabled":true},{"externalId":"s3-bpa-no-acl-defaults","enabled":true},{"externalId":"s3-polaris-lamb","enabled":true},{"externalId":"s3-batch-ops-us-west-1","enabled":true},{"externalId":"s3-cross-account-ap","enabled":true},{"externalId":"s3-odr","enabled":true},{"externalId":"s3-dndr","enabled":true},{"externalId":"s3-polaris-acceleration-us-east-2","enabled":true},{"externalId":"s3-polaris-acceleration-us-east-1","enabled":true},{"externalId":"s3-polaris-spotlight","enabled":true},{"externalId":"s3-batch-ops-delete-tags","enabled":true},{"externalId":"s3-inventory-int-access","enabled":true},{"externalId":"glacier-launched-ap-southeast-1","enabled":true},{"externalId":"s3-me-central-1","enabled":true},{"externalId":"s3-veyron-ga","enabled":true},{"externalId":"glacier-launched-ap-southeast-2","enabled":true},{"externalId":"s3-storage-insights","enabled":true},{"externalId":"s3-batch-ops-tags","enabled":true},{"externalId":"aws-market-target-system","enabled":true},{"externalId":"s3-intro-video","enabled":true},{"externalId":"s3-pennywise","enabled":true},{"externalId":"s3-batch-ops-eu-south-1","enabled":true},{"externalId":"s3-si","enabled":true},{"externalId":"s3-prod-stack-ca-west-1","enabled":true},{"externalId":"s3-batch-ops-ap-southeast-1","enabled":true},{"externalId":"s3-batch-ops-eu-south-2","enabled":true},{"externalId":"s3-batch-ops-ap-southeast-4","enabled":true},{"externalId":"s3-batch-ops-ap-southeast-3","enabled":true},{"externalId":"s3-batch-ops-ap-southeast-2","enabled":true},{"externalId":"s3-darknight","enabled":true},{"externalId":"s3-replication-metrics","enabled":true},{"externalId":"s3-prod-stack-ca-central-1","enabled":true},{"externalId":"s3-cf","enabled":true},{"externalId":"object-list-filter-sync","enabled":true},{"externalId":"s3-polaris-access-analyzer-ap","enabled":true},{"externalId":"s3-banner-v2","enabled":true},{"externalId":"s3-help-panel","enabled":true},{"externalId":"glacier-launched-eu-central-1","enabled":true},{"externalId":"s3-inventory-encryption","enabled":true},{"externalId":"s3-batch-ops-il-central-1","enabled":true},{"externalId":"s3-polaris-bpa","enabled":true},{"externalId":"s3-batch-ops-us-east-1","enabled":true},{"externalId":"s3-batch-ops-us-east-2","enabled":true},{"externalId":"s3-batch-ops-iceidore","enabled":true},{"externalId":"s3-crr-rpo","enabled":true},{"externalId":"s3-ap-create","enabled":true},{"externalId":"s3-prod-stack-ap-south-2","enabled":true},{"externalId":"s3-batch-ops-sa-east-1","enabled":true},{"externalId":"s3-prod-stack-ap-south-1","enabled":true},{"externalId":"glacier-launched-eu-west-2","enabled":true},{"externalId":"glacier-launched-eu-west-3","enabled":true},{"externalId":"s3-staircase-disabled-eu-south-2","enabled":true},{"externalId":"glacier-launched-eu-west-1","enabled":true},{"externalId":"s3-access","enabled":true},{"externalId":"s3-polaris-object-ownership","enabled":true},{"externalId":"s3-crr-cn-custom-text","enabled":false},{"externalId":"s3-staircase-disabled-ap-south-2","enabled":true},{"externalId":"s3-staircase-disabled-ap-southeast-4","enabled":true},{"externalId":"s3-veyron-ga-hp-p2","enabled":true},{"externalId":"s3-ap-get-cache","enabled":true},{"externalId":"s3-polaris-acceleration-ap-south-1","enabled":true},{"externalId":"s3-prod-stack-me-central-1","enabled":true},{"externalId":"s3-crr","enabled":true},{"externalId":"s3-spotlight","enabled":true},{"externalId":"s3-int-tiering","enabled":true},{"externalId":"use-status-500","enabled":true},{"externalId":"s3-polaris-acceleration-ap-southeast-1","enabled":true},{"externalId":"s3-lc-filter","enabled":true},{"externalId":"s3-polaris-acceleration-ap-southeast-2","enabled":true},{"externalId":"s3-batch-ops-af-south-1","enabled":true},{"externalId":"s3-bops-active-timer","enabled":true},{"externalId":"s3-prod-stack-af-south-1","enabled":true},{"externalId":"s3-data-import","enabled":true},{"externalId":"s3-prod-stack-eu-west-3","enabled":true},{"externalId":"s3-lamb-account-snapshot","enabled":true},{"externalId":"s3-securus","enabled":true},{"externalId":"s3-batch-ops-ga","enabled":true},{"externalId":"s3-prod-stack-eu-west-1","enabled":true},{"externalId":"s3-prod-stack-eu-west-2","enabled":true},{"externalId":"aws-target-service-analytics","enabled":true},{"externalId":"s3-polaris-acceleration","enabled":true},{"externalId":"s3-crr-kms-template-v3","enabled":true},{"externalId":"s3-crr-kms-template-v2","enabled":true},{"externalId":"s3-cross-account-mrap","enabled":true},{"externalId":"s3-copy-through-ap","enabled":true},{"externalId":"s3-polaris-acceleration-ca-central-1","enabled":true},{"externalId":"s3-change-encryption","enabled":true},{"externalId":"s3-vanilla","enabled":true},{"externalId":"s3-oi-ol","enabled":true},{"externalId":"s3-lens-export-to-cloudwatch","enabled":true},{"externalId":"s3-bpa-no-acl-defaults-prerequisites","enabled":true},{"externalId":"s3-polaris-update-route-mistmatch-reload","enabled":true},{"externalId":"s3-bpa-no-acl-defaults-banners","enabled":true},{"externalId":"s3-no-enc","enabled":true},{"externalId":"s3-srr","enabled":true},{"externalId":"s3-sa-east-1","enabled":true},{"externalId":"s3-inv-acl","enabled":true},{"externalId":"s3-tulip","enabled":true},{"externalId":"s3-batch-ops-eu-central-1","enabled":true},{"externalId":"s3-bulk-analyze-access","enabled":true},{"externalId":"s3-change-storage-class","enabled":true},{"externalId":"s3-batch-ops-lambda","enabled":true},{"externalId":"glacier-launched-eu-south-1","enabled":true},{"externalId":"s3-veyron-ga-regions","enabled":true},{"externalId":"glacier-launched-ap-south-1","enabled":true},{"externalId":"s3-oi-pq","enabled":false},{"externalId":"s3-x-acceleration","enabled":true},{"externalId":"s3-batch-ops-eu-central-2","enabled":true}]' awsc-clog-fac-disabled="true"/>
+        <link rel="stylesheet" type="text/css" href="https://d2z54bbbe6wozw.cloudfront.net/content/0fb0b8b7-cfe4-4faf-972e-3f4803b86ba0/commonv3.css" charset="utf-8"/>
+
+    
+</head>
+<body spellcheck="false">
+  <div id="b">
+    <div id="h" ng-non-bindable>
+
+
+<div id="consoleNavHeader" style=""><div id="skeleton-nav-awt-wrapper" data-testid="skeleton-nav-default-awt-wrapper">
+<div class="skeleton-nav-awt-loader">
+  <div class="aws-logo-wrapper">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      version="2.0"
+      focusable="false"
+      aria-hidden="true"
+      class="aws-logo"
+      viewBox="0 0 29 17"
+    >
+      <path
+        class="aws-logo__letters"
+        d="M8.38 6.17a2.6 2.6 0 00.11.83c.08.232.18.456.3.67a.4.4 0 01.07.21.36.36 0 01-.18.28l-.59.39a.43.43 0 01-.24.08.38.38 0 01-.28-.13 2.38 2.38 0 01-.34-.43c-.09-.16-.18-.34-.28-.55a3.44 3.44 0 01-2.74 1.29 2.54 2.54 0 01-1.86-.67 2.36 2.36 0 01-.68-1.79 2.43 2.43 0 01.84-1.92 3.43 3.43 0 012.29-.72 6.75 6.75 0 011 .07c.35.05.7.12 1.07.2V3.3a2.06 2.06 0 00-.44-1.49 2.12 2.12 0 00-1.52-.43 4.4 4.4 0 00-1 .12 6.85 6.85 0 00-1 .32l-.33.12h-.14c-.14 0-.2-.1-.2-.29v-.46A.62.62 0 012.3.87a.78.78 0 01.27-.2A6 6 0 013.74.25 5.7 5.7 0 015.19.07a3.37 3.37 0 012.44.76 3 3 0 01.77 2.29l-.02 3.05zM4.6 7.59a3 3 0 001-.17 2 2 0 00.88-.6 1.36 1.36 0 00.32-.59 3.18 3.18 0 00.09-.81V5A7.52 7.52 0 006 4.87h-.88a2.13 2.13 0 00-1.38.37 1.3 1.3 0 00-.46 1.08 1.3 1.3 0 00.34 1c.278.216.63.313.98.27zm7.49 1a.56.56 0 01-.36-.09.73.73 0 01-.2-.37L9.35.93a1.39 1.39 0 01-.08-.38c0-.15.07-.23.22-.23h.92a.56.56 0 01.36.09.74.74 0 01.19.37L12.53 7 14 .79a.61.61 0 01.18-.37.59.59 0 01.37-.09h.75a.62.62 0 01.38.09.74.74 0 01.18.37L17.31 7 18.92.76a.74.74 0 01.19-.37.56.56 0 01.36-.09h.87a.21.21 0 01.23.23 1 1 0 010 .15s0 .13-.06.23l-2.26 7.2a.74.74 0 01-.19.37.6.6 0 01-.36.09h-.8a.53.53 0 01-.37-.1.64.64 0 01-.18-.37l-1.45-6-1.44 6a.64.64 0 01-.18.37.55.55 0 01-.37.1l-.82.02zm12 .24a6.29 6.29 0 01-1.44-.16 4.21 4.21 0 01-1.07-.37.69.69 0 01-.29-.26.66.66 0 01-.06-.27V7.3c0-.19.07-.29.21-.29a.57.57 0 01.18 0l.23.1c.32.143.656.25 1 .32.365.08.737.12 1.11.12a2.47 2.47 0 001.36-.31 1 1 0 00.48-.88.88.88 0 00-.25-.65 2.29 2.29 0 00-.94-.49l-1.35-.43a2.83 2.83 0 01-1.49-.94 2.24 2.24 0 01-.47-1.36 2 2 0 01.25-1c.167-.3.395-.563.67-.77a3 3 0 011-.48A4.1 4.1 0 0124.4.08a4.4 4.4 0 01.62 0l.61.1.53.15.39.16c.105.062.2.14.28.23a.57.57 0 01.08.31v.44c0 .2-.07.3-.21.3a.92.92 0 01-.36-.12 4.35 4.35 0 00-1.8-.36 2.51 2.51 0 00-1.24.26.92.92 0 00-.44.84c0 .249.1.488.28.66.295.236.635.41 1 .51l1.32.42a2.88 2.88 0 011.44.9 2.1 2.1 0 01.43 1.31 2.38 2.38 0 01-.24 1.08 2.34 2.34 0 01-.68.82 3 3 0 01-1 .53 4.59 4.59 0 01-1.35.22l.03-.01z"
+      ></path>
+      <path
+        class="aws-logo__smile"
+        d="M25.82 13.43a20.07 20.07 0 01-11.35 3.47A20.54 20.54 0 01.61 11.62c-.29-.26 0-.62.32-.42a27.81 27.81 0 0013.86 3.68 27.54 27.54 0 0010.58-2.16c.52-.22.96.34.45.71z"
+      ></path>
+      <path
+        class="aws-logo__smile"
+        d="M27.1 12c-.4-.51-2.6-.24-3.59-.12-.3 0-.34-.23-.07-.42 1.75-1.23 4.63-.88 5-.46.37.42-.09 3.3-1.74 4.68-.25.21-.49.09-.38-.18.34-.95 1.17-3.02.78-3.5z"
+      ></path>
+    </svg>
+  </div>
+</div>
+<style id="skeleton-nav-awt-style">
+  .skeleton-nav-awt-loader .aws-logo {
+    display: block;
+    width: 33px;
+    height: 19px;
+    position: relative;
+  }
+
+  .skeleton-nav-awt-loader .aws-logo-wrapper {
+    position: relative;
+    padding: 9px 17px;
+  }
+
+  .skeleton-nav-awt-loader .aws-logo__letters {
+    fill: #ffffff;
+  }
+
+  .skeleton-nav-awt-loader .aws-logo__smile {
+    fill: #f8991d;
+    fill-rule: evenodd;
+  }
+
+  .skeleton-nav-awt-loader {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    background-color: #232f3e;
+    border-bottom: 1px solid rgb(84, 91, 100);
+  }
+</style>
+</div></div>
+</div>
+<div id="cc">
+  <div id="c">
+
+
+      <div class="awsui" id="app"></div>
+    
+</div>
+</div>
+<div id="f" role="contentinfo" ng-non-bindable>
+
+<div id="footer">
+</div>
+<div id="console-nav-footer" style="">
+    <div id="footer-content">
+    </div>
+</div>
+</div>
+</div>
+
+<script data-platform-asset="panorama" id="awsc-panorama-bundle" type="text/javascript" crossorigin="anonymous" src="https://a.b.cdn.console.awsstatic.com/a/v1/4LTKY3PG5ERM7HOZYNTVJA6WNMSUA5X7ILNM5TCSWGBJUU6JTP5Q/init/fef0778c462543638daee36c50793eacd1952fe28abf499097dd9294121976ea.js" data-url="https://a.b.cdn.console.awsstatic.com/a/v1/4LTKY3PG5ERM7HOZYNTVJA6WNMSUA5X7ILNM5TCSWGBJUU6JTP5Q/9cc197eff0b94f4db317189ff24ff95720cd60ed75f948a78596bb11d84c1934.js"></script>
+<script data-platform-asset="telemetry-broker" type="text/javascript" src="https://a.b.cdn.console.awsstatic.com/a/v1/WAZZVBOCIHG3YDKJHVKLMAC32SLLEYS2U7ZVN2O7Q3QPHYUJ6VDA/index.js"></script>
+
+
+        <script type="text/javascript" src="https://d2z54bbbe6wozw.cloudfront.net/content/0fb0b8b7-cfe4-4faf-972e-3f4803b86ba0/vendorv3.js" charset="utf-8"></script>
+        <script type="text/javascript" src="https://d2z54bbbe6wozw.cloudfront.net/content/0fb0b8b7-cfe4-4faf-972e-3f4803b86ba0/en-json.js" charset="utf-8"></script>
+        <script type="text/javascript" src="https://d2z54bbbe6wozw.cloudfront.net/content/0fb0b8b7-cfe4-4faf-972e-3f4803b86ba0/commonv3.js" charset="utf-8"></script>
+        <script type="text/javascript" src="https://d2z54bbbe6wozw.cloudfront.net/content/0fb0b8b7-cfe4-4faf-972e-3f4803b86ba0/s3consolev3.js" charset="utf-8"></script>
+        
+
+        <script type="text/javascript">
+            performanceMeasure("PageDoneLoading");
+        </script>
+    
+
+
+
+    
+</body>
+</html>
+
